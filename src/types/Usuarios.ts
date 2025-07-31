@@ -6,16 +6,30 @@ import { RolesPorUsuario } from "./RolesPorUsuario";
 
 export type Usuarios = {
     id_usuario: string;
-    nombreCompleto: string;
+    nombrecompleto: string;
     correo: string;
     username: string;
-    password: string;
-    enable: boolean;
-    fecha_registro: Date;  
-    ultima_actualizacion: Date;
-    incidencias: Incidencias[];
-    respondersPorIncidencia: RespondersPorIncidencia[];
-    rolesPorUsuario: RolesPorUsuario[];
-    timeline: Timeline[];
-    watchersPorIncidencia: WatchersPorIncidencia[];
+    password_hash?: string;
+    enable: boolean | null; // Ensure enable is boolean, not null
+    fecha_registro: Date | null;  
+    incidencias?: Incidencias[];
+    respondersporincidencia?: RespondersPorIncidencia[];
+    rolesporusuario?: RolesPorUsuario[];
+    timeline?: Timeline[];
+    watchersporincidencia?: WatchersPorIncidencia[];
 }
+
+
+export const usuarioEmpty: Usuarios = {
+    id_usuario: "",
+    nombrecompleto: "",
+    correo: "",
+    username: "",
+    enable: false,
+    fecha_registro: new Date() || null,
+    incidencias: [],
+    respondersporincidencia: [],
+    rolesporusuario: [],
+    timeline: [],
+    watchersporincidencia: []
+};

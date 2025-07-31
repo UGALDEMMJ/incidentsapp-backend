@@ -84,7 +84,7 @@ model usuarios {
   correo                  String                    @unique @db.VarChar(100)
   username                String                    @unique @db.VarChar(100)
   password_hash           String                    @db.VarChar(255)
-  enable                  Boolean?                  @default(true)
+  enable                  Boolean                   @default(false)
   fecha_registro          DateTime?                 @default(now()) @db.Timestamp(6)
   incidencias             incidencias[]
   respondersporincidencia respondersporincidencia[]

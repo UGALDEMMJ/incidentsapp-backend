@@ -8,15 +8,15 @@ import { Timeline } from './Timeline';
 export type Incidencias = {
     id_incidencias: string;
     id_usuario: string;
-    nombre: string;
-    descripcion: string;
-    fecha_creacion: Date;
+    nombre: string | null;
+    descripcion: string | null;
+    fecha_creacion: Date | null;
     id_status: string;
     id_prioridad: string;
-    prioridad: Prioridad;
-    status: Status;
+    prioridad?: Prioridad;
+    status?: Status;
     usuarios: Usuarios;
-    responders: RespondersPorIncidencia;
-    watchers: WatchersPorIncidencia;
+    respondersporincidencia: RespondersPorIncidencia;
+    watchersporincidencia: WatchersPorIncidencia;
     timeline: Timeline[];
 }
