@@ -33,3 +33,13 @@ export const usuarioEmpty: Usuarios = {
     timeline: [],
     watchersporincidencia: []
 };
+
+export type usuarioDTO = {
+    id_usuario?: string;
+    nombrecompleto?: string;
+    correo?: string;
+    username?: string;
+    password_hash?: string;
+    enable?: boolean | null;
+    fecha_registro?: Date | null;
+};

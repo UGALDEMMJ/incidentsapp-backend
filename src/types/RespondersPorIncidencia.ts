@@ -8,3 +8,4 @@ export type RespondersPorIncidencia = {
     incidencias: Incidencias;
     usuarios: Usuarios;
 }
+

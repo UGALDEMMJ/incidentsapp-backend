@@ -15,3 +15,10 @@ export type Timeline = {
     status_timeline_prevstatusTostatus?: Status | null;
     status_timeline_newstatusTostatus?: Status | null;
 }
+
+export const cambios: {
+    prevstatus?: string;
+    newstatus?: string;
+    prevprioridad?: string;
+    newprioridad?: string;
+} = {};

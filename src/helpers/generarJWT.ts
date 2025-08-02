@@ -15,7 +15,7 @@ export const generarJWTSignUp = (payload: Payload): string => {
     return jwt.sign(payload, SECRET, { expiresIn: '1h' });
 }
 
-export const  verificarJWT = (token: string): Payload | null => {
+export const verificarJWT = (token: string): Payload | null => {
     try{
         return jwt.verify(token, SECRET) as Payload;
     }catch (error) {
